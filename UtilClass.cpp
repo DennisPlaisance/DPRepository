@@ -5,27 +5,34 @@
 
 using namespace std;
 
-stringUtil::stringUtil()
+stringUtil::stringUtil() // Default Constructor (No Parameters)
 {
 	mainStrInput = "default";
 }
 
-stringUtil::stringUtil(string strInput)
+stringUtil::stringUtil(string strInput) // Recommended Constructor
 {
 	mainStrInput = strInput;
 }
 
-int stringUtil::Length()
+int stringUtil::Length() // Returns an integer representing the count of characters up to the null termination character
 {
 	return mainStrInput.length();
 }
 
-/*char stringUtil::CharacterAt()
+char stringUtil::CharacterAt(int index) // Returns a char representing the character at the location. If index is less than 0 or greater than length, return '\0'
 {
+	if (index < 0 || index > mainStrInput.length())
+	{
+		return '\0';
+	}
+	else
+	{
+		return mainStrInput[index];
+	}
+}
 
-}*/
-
-bool stringUtil::EqualTo(string strInput)
+bool stringUtil::EqualTo(string strInput) // Returns true if str contains the same characters
 {
 	bool comparison = (mainStrInput == strInput);
 
@@ -39,24 +46,20 @@ bool stringUtil::EqualTo(string strInput)
 	}
 }
 
-string stringUtil::Append(string strInput)
+string stringUtil::Append(string strInput) // Adds str to the end of the string
 {
 	return mainStrInput.append(strInput);
 }
 
-string stringUtil::Prepend(string strInput)
+string stringUtil::Prepend(string strInput) // Adds str to the beginning of the string
 {
 	string combination = (strInput + mainStrInput);
+	mainStrInput = combination;
 
 	return combination;
 }
 
-/*char stringUtil::CStr()
-{
-
-}*/
-
-string stringUtil::ToLower()
+string stringUtil::ToLower() // Convert all characters to lowercase
 {
 	for (int i = 0; i < mainStrInput.length(); i++)
 	{
@@ -68,7 +71,7 @@ string stringUtil::ToLower()
 	return mainStrInput;
 }
 
-string stringUtil::ToUpper()
+string stringUtil::ToUpper() // Convert all characters to uppercase
 {
 	for (int i = 0; i < mainStrInput.length(); i++)
 	{
@@ -80,7 +83,7 @@ string stringUtil::ToUpper()
 	return mainStrInput;
 }
 
-int stringUtil::Find(string findString)
+int stringUtil::Find(string findString) // Returns the location of the findString. If not found, return -1
 {
 	if (mainStrInput.find(findString))
 	{
@@ -92,7 +95,7 @@ int stringUtil::Find(string findString)
 	}
 }
 
-int stringUtil::Find(int startIndex, string findString)
+int stringUtil::Find(int startIndex, string findString) // Returns the location of the findString. Beginning the search from startIndex. If not found, return -1
 {
 	if (mainStrInput.find(findString, startIndex))
 	{
@@ -104,13 +107,22 @@ int stringUtil::Find(int startIndex, string findString)
 	}
 }
 
-//void stringUtil::Replace(string findString, string replaceString)
-//{
-//	for (int i = 0; i < mainStrInput.length(); i++)
-//	{
-//		if (mainStrInput.find(findString))
-//		{
-//			findString.replace(replaceString);
-//		}
-//	}
-//}
+void stringUtil::Replace(string findString, string replaceString) // Replaces all occurrences of findString with replaceString
+{
+	int stringPos = mainStrInput.find(findString);
+	while (stringPos != mainStrInput.npos)
+	{
+		mainStrInput.replace(stringPos, findString.length(), replaceString);
+		stringPos = mainStrInput.find(findString, stringPos + replaceString.length());
+	}
+}
+
+void stringUtil::ReadFromConsole() // Wait for input in the console window and store the result
+{
+	cin >> mainStrInput;
+}
+
+void stringUtil::WriteToConsole() // Writes the string to the console window
+{
+	cout << mainStrInput << endl;
+}

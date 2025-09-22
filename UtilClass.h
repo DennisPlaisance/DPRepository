@@ -15,16 +15,17 @@ public:
 	stringUtil();
 	stringUtil(string strInput);
 	int Length();
-	//char CharacterAt();
+	char CharacterAt(int index);
 	bool EqualTo(string strInput);
 	string Append(string strInput);
 	string Prepend(string strInput);
-	//char CStr();
 	string ToLower();
 	string ToUpper();
 	int Find(string findString);
 	int Find(int startIndex, string findString);
-	/*void Replace(string findString, string replaceString);*/
+	void Replace(string findString, string replaceString);
+	void ReadFromConsole();
+	void WriteToConsole();
 };
 
 #endif
