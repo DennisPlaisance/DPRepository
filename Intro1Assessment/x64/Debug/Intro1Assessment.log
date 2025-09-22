@@ -1,0 +1,7 @@
+﻿  Main.cpp
+  UtilClass.cpp
+C:\Users\s258034\Documents\GitHub\DPRepository\UtilClass.cpp(20,28): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258034\Documents\GitHub\DPRepository\UtilClass.cpp(87,27): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258034\Documents\GitHub\DPRepository\UtilClass.cpp(99,27): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  Intro1Assessment.vcxproj -> C:\Users\s258034\Documents\GitHub\DPRepository\x64\Debug\Intro1Assessment.exe
