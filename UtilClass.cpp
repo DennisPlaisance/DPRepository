@@ -107,7 +107,7 @@ int stringUtil::Find(int startIndex, string findString) // Returns the location 
 	}
 }
 
-void stringUtil::Replace(string findString, string replaceString) // Replaces all occurrences of findString with replaceString
+string stringUtil::Replace(string findString, string replaceString) // Replaces all occurrences of findString with replaceString
 {
 	int stringPos = mainStrInput.find(findString);
 	while (stringPos != mainStrInput.npos)
@@ -115,6 +115,7 @@ void stringUtil::Replace(string findString, string replaceString) // Replaces al
 		mainStrInput.replace(stringPos, findString.length(), replaceString);
 		stringPos = mainStrInput.find(findString, stringPos + replaceString.length());
 	}
+	return mainStrInput;
 }
 
 void stringUtil::ReadFromConsole() // Wait for input in the console window and store the result

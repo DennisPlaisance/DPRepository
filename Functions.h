@@ -17,3 +17,4 @@ void stringAdvancedFindTest();
 void stringReplaceTest();
 void stringWriteToConsoleTest();
 void stringReadFromConsoleTest();
+void logTestResults(int passed, int total);

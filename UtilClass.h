@@ -23,7 +23,7 @@ public:
 	string ToUpper();
 	int Find(string findString);
 	int Find(int startIndex, string findString);
-	void Replace(string findString, string replaceString);
+	string Replace(string findString, string replaceString);
 	void ReadFromConsole();
 	void WriteToConsole();
 };

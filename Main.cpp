@@ -8,6 +8,9 @@ using namespace std;
 
 void runAll()
 {
+	int total = 13;
+	int passed = 0;
+	
 	stringLengthTest();
 	stringCharacterAtTest();
 	stringEqualToTest();
