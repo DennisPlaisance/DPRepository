@@ -1,0 +1,155 @@
+Tests Passed: 13/13
+Success Rate: 100%
+
+Tests Passed: 13/13
+Success Rate: 100%
+
+Tests Passed: 12/13
+Success Rate: 92.3077%
+
+Tests Passed: 13/13
+Success Rate: 100%
+
+Tests Passed: 13/13
+Success Rate: 100%
+
+Tests Passed: 13/13
+Success Rate: 100%
+
+Tests Passed: 13/13
+Success Rate: 100%
+
+Tests Passed: 13/13
+Success Rate: 100%
+
+Tests Passed: 13/13
+Success Rate: 100%
+
+Test 0 Length Successful
+Tests Passed: 13/13
+Success Rate: 100%
+
+Test 0 Length Successful
+Test 1 CharacterAt Successful
+Test 2 EqualTo Successful
+Test 3 Append Successful
+Test 4 Prepend Successful
+Test 5 ToLower Successful
+Tests Passed: 13/13
+Success Rate: 100%
+
+Test 0 Length Successful
+Test 1 CharacterAt Successful
+Test 2 EqualTo Successful
+Test 3 Append Successful
+Test 4 Prepend Successful
+Test 5 ToLower Successful
+Test 6 ToUpper Successful
+Test 7 Find Successful
+Test 8 Advanced Find Successful
+Test 9 Replace Successful
+Test 10 WriteToConsole Successful
+Test 11 ReadFromConsole Successful
+Test 10 WriteToConsole Successful
+Tests Passed: 13/13
+Success Rate: 100%
+
+Test 0 Length Successful
+Test 1 CharacterAt Successful
+Test 2 EqualTo Successful
+Test 3 Append Successful
+Test 4 Prepend Successful
+Test 5 ToLower Successful
+Test 6 ToUpper Successful
+Test 7 Find Successful
+Test 8 Advanced Find Successful
+Test 9 Replace Successful
+Test 10 WriteToConsole Successful
+Test 11 ReadFromConsole Successful
+Test 0 Length Successful
+Test 1 CharacterAt Successful
+Test 2 EqualTo Successful
+Test 3 Append Successful
+Test 4 Prepend Successful
+Test 5 ToLower Successful
+Test 6 ToUpper Successful
+Test 7 Find Successful
+Test 8 Advanced Find Successful
+Test 9 Replace Successful
+Test 10 WriteToConsole Successful
+Test 11 ReadFromConsole Successful
+Tests Passed: 12/13
+Success Rate: 92.3077%
+
+Test 0 Length Successful
+Test 1 CharacterAt Successful
+Test 2 EqualTo Successful
+Test 3 Append Successful
+Test 4 Prepend Successful
+Test 5 ToLower Successful
+Test 6 ToUpper Successful
+Test 7 Find Successful
+Test 8 Advanced Find Successful
+Test 9 Replace Successful
+Test 10 WriteToConsole Successful
+Test 11 ReadFromConsole Successful
+Tests Passed: 12/13
+Success Rate: 92.3077%
+
+Test 0 Length Successful
+Test 1 CharacterAt Successful
+Test 2 EqualTo Successful
+Test 3 Append Successful
+Test 4 Prepend Successful
+Test 5 ToLower Successful
+Test 6 ToUpper Successful
+Test 7 Find Successful
+Test 8 Advanced Find Successful
+Test 9 Replace Successful
+Test 10 WriteToConsole Successful
+Test 11 ReadFromConsole Successful
+Tests Passed: 12/12
+Success Rate: 100%
+
+Test 0 Length Successful
+Test 1 CharacterAt Successful
+Test 2 EqualTo Successful
+Test 3 Append Successful
+Test 4 Prepend Successful
+Test 5 ToLower Successful
+Test 6 ToUpper Successful
+Test 7 Find Successful
+Test 8 Advanced Find Successful
+Test 9 Replace Successful
+Test 10 WriteToConsole Successful
+Test 11 ReadFromConsole Successful
+Test 0 Length Successful
+Test 1 CharacterAt Successful
+Test 2 EqualTo Successful
+Test 3 Append Successful
+Test 4 Prepend Successful
+Test 5 ToLower Successful
+Test 6 ToUpper Successful
+Test 7 Find Successful
+Test 8 Advanced Find Successful
+Test 9 Replace Successful
+Test 10 WriteToConsole Successful
+Test 11 ReadFromConsole Successful
+Tests Passed: 12/12
+Success Rate: 100%
+
+Test 0 Length Successful
+Test 1 CharacterAt Successful
+Test 2 EqualTo Successful
+Test 3 Append Successful
+Test 4 Prepend Successful
+Test 5 ToLower Successful
+Test 6 ToUpper Successful
+Test 7 Find Successful
+Test 8 Advanced Find Successful
+Test 9 Replace Successful
+Test 10 WriteToConsole Successful
+Test 11 ReadFromConsole Successful
+Tests Passed: 12/12
+Success Rate: 100%
+

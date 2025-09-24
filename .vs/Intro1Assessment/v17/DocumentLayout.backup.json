@@ -7,12 +7,20 @@
       "RelativeMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|solutionrelative:Functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Task2Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|solutionrelative:Task2Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|solutionrelative:Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Task3Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|solutionrelative:Task3Functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Task2Functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|solutionrelative:Task2Functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Task3Functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|solutionrelative:Task3Functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95845B94-A1EC-4F88-9E06-15B929C06465}|Intro1Assessment.vcxproj|C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\UtilClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -40,7 +48,7 @@
               "RelativeDocumentMoniker": "Main.cpp",
               "ToolTip": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Main.cpp",
               "RelativeToolTip": "Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-22T15:38:27.739Z",
               "EditorCaption": ""
@@ -48,38 +56,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Functions.h",
-              "DocumentMoniker": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Functions.h",
-              "RelativeDocumentMoniker": "Functions.h",
-              "ToolTip": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Functions.h",
-              "RelativeToolTip": "Functions.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-23T14:20:15.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UtilClass.cpp",
-              "DocumentMoniker": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\UtilClass.cpp",
-              "RelativeDocumentMoniker": "UtilClass.cpp",
-              "ToolTip": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\UtilClass.cpp",
-              "RelativeToolTip": "UtilClass.cpp",
-              "ViewState": "AgIAADQAAAAAAAAAAAAAAHMAAAAHAAAAAAAAAA==",
+              "Title": "Task2Functions.cpp",
+              "DocumentMoniker": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Task2Functions.cpp",
+              "RelativeDocumentMoniker": "Task2Functions.cpp",
+              "ToolTip": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Task2Functions.cpp",
+              "RelativeToolTip": "Task2Functions.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-22T16:52:39.801Z",
+              "WhenOpened": "2025-09-24T14:32:10.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Functions.cpp",
-              "DocumentMoniker": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Functions.cpp",
-              "RelativeDocumentMoniker": "Functions.cpp",
-              "ToolTip": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Functions.cpp",
-              "RelativeToolTip": "Functions.cpp",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Title": "Task3Functions.cpp",
+              "DocumentMoniker": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Task3Functions.cpp",
+              "RelativeDocumentMoniker": "Task3Functions.cpp",
+              "ToolTip": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Task3Functions.cpp",
+              "RelativeToolTip": "Task3Functions.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-23T14:20:00.099Z",
               "EditorCaption": ""
@@ -87,6 +82,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Task3Functions.h",
+              "DocumentMoniker": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Task3Functions.h",
+              "RelativeDocumentMoniker": "Task3Functions.h",
+              "ToolTip": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Task3Functions.h",
+              "RelativeToolTip": "Task3Functions.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-23T14:20:15.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Task2Functions.h",
+              "DocumentMoniker": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Task2Functions.h",
+              "RelativeDocumentMoniker": "Task2Functions.h",
+              "ToolTip": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\Task2Functions.h",
+              "RelativeToolTip": "Task2Functions.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-24T14:32:21.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UtilClass.cpp",
+              "DocumentMoniker": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\UtilClass.cpp",
+              "RelativeDocumentMoniker": "UtilClass.cpp",
+              "ToolTip": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\UtilClass.cpp",
+              "RelativeToolTip": "UtilClass.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-22T16:52:39.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UtilClass.h",
               "DocumentMoniker": "C:\\Users\\s258034\\Documents\\GitHub\\DPRepository\\UtilClass.h",
               "RelativeDocumentMoniker": "UtilClass.h",
