@@ -7,18 +7,17 @@
 using namespace std;
 #pragma once
 
-//class player
-//{
-//protected:
-//	string name;
-//	int health;
-//	string actions;
-//
-//public:
-//	player();
-//	player(string playerName, int playerHealth);
-//
-//	bool findAction();
-//};
+class player
+{
+protected:
+	int health;
+
+public:
+	player();
+	player(int playerHealth);
+
+	int getHealth();
+	//bool findAction(string actionName);
+};
 
 #endif

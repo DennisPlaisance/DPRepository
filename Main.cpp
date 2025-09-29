@@ -5,6 +5,8 @@
 #include "ItemClass.h"
 #include "RoomClass.h"
 #include "PlayerClass.h"
+#include "ActionClass.h"
+#include "Game.h"
 #include "Task2Functions.h"
 #include "Task3Functions.h"
 
@@ -57,33 +59,8 @@ using namespace std;
 //	logTestResults(passed, total);
 //}
 
-void gameStart();
-void gameHelp();
-
 int main()
 {
-	string command;
-	stringUtil commandString(command);
-
-	gameStart();
-	commandString.ReadFromConsole();
-
-	if (commandString.ToLower() == "help")
-	{
-		gameHelp();
-	}
-}
-
-void gameStart()
-{
-	cout << "Task 4 Assessment" << endl;
-	cout << "==================================================" << endl;
-	cout << "The Bunker is unsafe. Take caution." << endl;
-	cout << "What will you do first? Type 'help' for a list of commands." << endl;
-	cout << "==================================================" << endl;
-}
-
-void gameHelp()
-{
-	cout << "Placeholder Help." << endl;
+	Game newGame;
+	newGame.gameStart();
 }

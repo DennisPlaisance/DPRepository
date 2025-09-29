@@ -31,3 +31,17 @@ void item::useItem()
 	stringUtil shownUsage = usageText;
 	shownUsage.WriteToConsole();
 }
+
+void CenterArtifact::describeItem()
+{
+	string customDesc = "An artifact that vaguely looks like a vase.";
+	stringUtil descriptionNeeded = customDesc;
+	descriptionNeeded.WriteToConsole();
+}
+
+void CenterArtifact::useItem()
+{
+	string customUse = "This item cannot be used!";
+	stringUtil descriptionNeeded = customUse;
+	descriptionNeeded.WriteToConsole();
+}

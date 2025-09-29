@@ -7,6 +7,17 @@
 using namespace std;
 #pragma once
 
+class action
+{
+protected:
+	string name;
+	int damage;
 
+public:
+	action();
+	action(string actionName, int damageAmount);
+
+	virtual void cast();
+};
 
 #endif

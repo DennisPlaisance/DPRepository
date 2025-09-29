@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ActionClass.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="ItemClass.cpp" />
     <ClCompile Include="PlayerClass.cpp" />
     <ClCompile Include="RoomClass.cpp" />
@@ -138,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ActionClass.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="ItemClass.h" />
     <ClInclude Include="PlayerClass.h" />
     <ClInclude Include="RoomClass.h" />

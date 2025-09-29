@@ -22,4 +22,10 @@ public:
 	virtual void useItem();
 };
 
+class CenterArtifact : public item
+{
+	void describeItem() override;
+	void useItem() override;
+};
+
 #endif
