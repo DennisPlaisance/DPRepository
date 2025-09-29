@@ -27,6 +27,18 @@
     <ClCompile Include="Task2Functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ItemClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UtilClass.h">
@@ -36,6 +48,18 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Task2Functions.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemClass.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomClass.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerClass.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionClass.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
