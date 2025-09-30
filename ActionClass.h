@@ -17,7 +17,7 @@ public:
 	action();
 	action(string actionName, int damageAmount);
 
-	virtual void cast();
+	int cast();
 };
 
 #endif

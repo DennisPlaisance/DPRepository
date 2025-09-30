@@ -51,6 +51,9 @@
     <ClCompile Include="UtilClass.cpp">
       <Filter>Source Files\OldStringUtilClass</Filter>
     </ClCompile>
+    <ClCompile Include="EnemyClass.cpp">
+      <Filter>Source Files\GameClasses</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="UtilClass.h">
       <Filter>Source Files\OldStringUtilClass</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyClass.h">
+      <Filter>Source Files\GameClasses</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

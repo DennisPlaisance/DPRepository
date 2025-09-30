@@ -20,10 +20,7 @@ action::action(string actionName, int damageAmount)
 	damage = damageAmount;
 }
 
-void action::cast()
+int action::cast()
 {
-	string castMessage = name + " was cast, dealing " + to_string(damage) + " damage.";
-	stringUtil messageToCast(castMessage);
-
-	messageToCast.WriteToConsole();
+	return damage;
 }

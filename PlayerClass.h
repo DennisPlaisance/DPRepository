@@ -17,6 +17,8 @@ public:
 	player(int playerHealth);
 
 	int getHealth();
+	void takeDamage(int dmgAmount);
+	void heal(int healAmount);
 };
 
 #endif

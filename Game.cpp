@@ -5,6 +5,7 @@
 #include "UtilClass.h"
 #include "RoomClass.h"
 #include "PlayerClass.h"
+#include "EnemyClass.h"
 #include "ActionClass.h"
 #include "Game.h"
 
@@ -28,9 +29,9 @@ void Game::gameStart() // Main game loop. While the player is still alive, certa
 	cout << "==================================================" << endl;
 
 	while (newPlayer.getHealth() > 0)
-	{
+	{		
 		commandString.ReadFromConsole();
-
+			
 		if (commandString.ToLower() == "help")
 		{
 			gameHelp();
@@ -59,33 +60,26 @@ void Game::gameStart() // Main game loop. While the player is still alive, certa
 		{
 			use();
 		}
-		else if (commandString.ToLower() == "knife")
+		else if (commandString.ToLower() == "health")
 		{
-			knife.cast();
-		}
-		else if (commandString.ToLower() == "shovel")
-		{
-			shovel.cast();
-		}
-		else if (commandString.ToLower() == "revolver")
-		{
-			revolver.cast();
+			showHealth();
 		}
 		else
 		{
 			cout << "Not a valid command. Try again." << endl;
 		}
 	}
+	cout << "You have perished. Game Over." << endl;
 }
 
-void Game::gameHelp()
+void Game::gameHelp() // Lists commands the player can type. These cannot be used in an attack.
 {
 	cout << "use - If a room has an item, this will use it." << endl;
+	cout << "health - Shows your current health." << endl;
 	cout << "north - Move North." << endl;
 	cout << "south - Move South." << endl;
 	cout << "east - Move East." << endl;
 	cout << "west - Move West." << endl;
-	cout << "actions - Brings up a list of actions." << endl;
 	cout << "help - Brings up this list of commands." << endl;
 }
 
@@ -108,6 +102,14 @@ void Game::roomCheck() // Checks what the current room is and prints its respect
 		if (not itemUsed[1])
 		{
 			rooms[1].describeItem();
+		}
+		if (not enemyAttacking && not enemyDead)
+		{
+			cout << "" << endl;
+			cout << "An enemy appears." << endl;
+			cout << "Remember your options of attack: " << endl;
+			actions();
+			enemyAttack();
 		}
 	}
 	else if (currentRoom == 3)
@@ -234,18 +236,24 @@ void Game::moveWest()
 	}
 }
 
-void Game::actions()
+void Game::actions() // Lists the actions a player can take in an attack.
 {
+	cout << "" << endl;
 	cout << "revolver - Revolver Gun" << endl;
 	cout << "shovel - Shovel Melee" << endl;
 	cout << "knife - Knife Melee" << endl;
+}
+
+void Game::showHealth()
+{
+	cout << "Your current health is: " << newPlayer.getHealth() << endl;
 }
 
 void Game::use() // There are two item types, items and foods. Items are usually toggleable, whiles foods are consumable, and are destroyed upon use.
 {
 	string useMessage;
 	
-	if (currentRoom == 1) // Toggleable Item
+	if (currentRoom == 1) // Toggleable
 	{
 		if (not itemUsed[0])
 		{
@@ -266,12 +274,26 @@ void Game::use() // There are two item types, items and foods. Items are usually
 			useOutput.WriteToConsole();
 		}
 	}
-	else if (currentRoom == 2) // Consumable Item
+	else if (currentRoom == 2) // Consumable
 	{
 		if (not itemUsed[1])
 		{
+			int healAmount = 5;
 			item roomItm = rooms[1].getItem();
 			roomItm.useItem();
+			if (newPlayer.getHealth() < 100)
+			{
+				if ((newPlayer.getHealth() + healAmount) > 100)
+				{
+					int healthToBeAdded = (newPlayer.getHealth() + healAmount) - 100;
+					newPlayer.heal(healthToBeAdded);
+				}
+				else
+				{
+					newPlayer.heal(healAmount);
+				}
+				cout << "Your health is now: " << newPlayer.getHealth() << endl;
+			}
 			itemUsed[1] = true;
 		}
 		else
@@ -281,7 +303,7 @@ void Game::use() // There are two item types, items and foods. Items are usually
 			useOutput.WriteToConsole();
 		}
 	}
-	else if (currentRoom == 3) // Toggleable Item
+	else if (currentRoom == 3) // Toggleable
 	{
 		if (not itemUsed[2])
 		{
@@ -302,12 +324,26 @@ void Game::use() // There are two item types, items and foods. Items are usually
 			useOutput.WriteToConsole();
 		}
 	}
-	else if (currentRoom == 4) // Consumable Item
+	else if (currentRoom == 4) // Consumable
 	{
 		if (not itemUsed[3])
 		{
+			int healAmount = 10;
 			item roomItm = rooms[3].getItem();
 			roomItm.useItem();
+			if (newPlayer.getHealth() < 100)
+			{
+				if ((newPlayer.getHealth() + healAmount) > 100)
+				{
+					int healthToBeAdded = (newPlayer.getHealth() + healAmount) - 100;
+					newPlayer.heal(healthToBeAdded);
+				}
+				else
+				{
+					newPlayer.heal(healAmount);
+				}
+				cout << "Your health is now: " << newPlayer.getHealth() << endl;
+			}
 			itemUsed[3] = true;
 		}
 		else
@@ -338,5 +374,67 @@ void Game::use() // There are two item types, items and foods. Items are usually
 		stringUtil wat(wut);
 
 		wat.WriteToConsole();
+	}
+}
+
+void Game::enemyAttack() // Plays out an attack. Players get the first turn, and from then on the enemy will attack second. When you die, you lose the game.
+{
+	action knife("Knife", 15);
+	action shovel("Shovel", 35);
+	action revolver("Revolver", 25);
+	
+	enemy screamer("Screamer", 80, 5);
+
+	enemyAttacking = true;
+
+	cout << "" << endl;
+	cout << "You currently have " << newPlayer.getHealth() << " health." << endl;
+	cout << "The enemy currently has " << screamer.getHealth() << " health." << endl;
+
+	while (enemyAttacking && not gameOver)
+	{
+		stringUtil attackString(attackMessage);
+		attackString.ReadFromConsole();
+
+		if (attackString.ToLower() == "revolver")
+		{
+			screamer.takeDamage(revolver.cast());
+			cout << "You fire off your revolver." << endl;
+		}
+		else if (attackString.ToLower() == "knife")
+		{
+			screamer.takeDamage(knife.cast());
+			cout << "You swing your knife." << endl;
+		}
+		else if (attackString.ToLower() == "shovel")
+		{
+			screamer.takeDamage(shovel.cast());
+			cout << "You swing your shovel." << endl;
+		}
+		else
+		{
+			cout << "This cannot be done in an attack." << endl;
+		}
+
+		if (screamer.getHealth() > 0)
+		{
+			cout << "" << endl;
+			cout << "The enemy's health has been dropped to " << screamer.getHealth() << "." << endl;
+
+			newPlayer.takeDamage(screamer.getDamage());
+			cout << "The enemy attacks, dropping your health to " << newPlayer.getHealth() << "." << endl;
+		}
+		else
+		{
+			cout << "The enemy has been defeated. It will no longer bother you." << endl;
+			cout << "" << endl;
+			enemyAttacking = false;
+			enemyDead = true;
+		}
+
+		if (newPlayer.getHealth() <= 0)
+		{
+			gameOver = true;
+		}
 	}
 }

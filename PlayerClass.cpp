@@ -23,3 +23,13 @@ int player::getHealth()
 {
 	return health;
 }
+
+void player::takeDamage(int dmgAmount)
+{
+	health -= dmgAmount;
+}
+
+void player::heal(int healAmount)
+{
+	health += healAmount;
+}
