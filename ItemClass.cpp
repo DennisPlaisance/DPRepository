@@ -10,14 +10,14 @@ item::item()
 {
 	itemName = "Placeholder";
 	itemDescription = "Does nothing.";
-	usageText = itemName + " Did nothing.";
+	usageText = "Did nothing.";
 }
 
 item::item(string nameUsed, string descUsed, string usageUsed)
 {
 	itemName = nameUsed;
 	itemDescription = descUsed;
-	usageText = itemName + " " + usageUsed;
+	usageText = usageUsed;
 }
 
 void item::describeItem()
@@ -32,16 +32,48 @@ void item::useItem()
 	shownUsage.WriteToConsole();
 }
 
-void CenterArtifact::describeItem()
+string item::getDescription()
 {
-	string customDesc = "An artifact that vaguely looks like a vase.";
-	stringUtil descriptionNeeded = customDesc;
+	return itemDescription;
+}
+
+string item::getName()
+{
+	return itemName;
+}
+
+food::food()
+{
+	itemName = "Placeholder";
+	itemDescription = "Does nothing.";
+	usageText = "Did nothing.";
+}
+
+food::food(string nameUsed, string descUsed, string usageUsed)
+{
+	itemName = nameUsed;
+	itemDescription = descUsed;
+	usageText = usageUsed;
+}
+
+void food::describeItem()
+{
+	stringUtil descriptionNeeded = itemDescription;
 	descriptionNeeded.WriteToConsole();
 }
 
-void CenterArtifact::useItem()
+void food::useItem()
 {
-	string customUse = "This item cannot be used!";
-	stringUtil descriptionNeeded = customUse;
-	descriptionNeeded.WriteToConsole();
+	stringUtil shownUsage = usageText;
+	shownUsage.WriteToConsole();
+}
+
+string food::getDescription()
+{
+	return itemDescription;
+}
+
+string food::getName()
+{
+	return itemName;
 }

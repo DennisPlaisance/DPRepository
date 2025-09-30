@@ -20,12 +20,20 @@ public:
 
 	virtual void describeItem();
 	virtual void useItem();
+	virtual string getDescription();
+	virtual string getName();
 };
 
-class CenterArtifact : public item
+class food : public item
 {
+public:
+	food();
+	food(string namedUsed, string descUsed, string usageUsed);
+
 	void describeItem() override;
 	void useItem() override;
+	string getDescription() override;
+	string getName() override;
 };
 
 #endif

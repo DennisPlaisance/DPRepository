@@ -12,6 +12,8 @@
 
 using namespace std;
 
+// Stuff from old tasks.
+
 //void task1()
 //{
 //	string testString = "ELL";

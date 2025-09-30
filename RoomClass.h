@@ -19,6 +19,8 @@ public:
 	room(string nameRoom, string describeRoom, item itemForRoom);
 
 	virtual void describeRoom();
+	virtual void describeItem();
+	virtual item getItem();
 };
 
 #endif

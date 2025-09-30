@@ -24,6 +24,21 @@ room::room(string nameRoom, string describeRoom, item itemForRoom)
 
 void room::describeRoom()
 {
-	stringUtil descriptionNeeded = roomDescription;
+	stringUtil nameNeeded("'" + roomName + "'");
+	stringUtil descriptionNeeded(roomDescription);
+	nameNeeded.WriteToConsole();
 	descriptionNeeded.WriteToConsole();
+}
+
+void room::describeItem()
+{
+	stringUtil nameNeeded("'" + roomItem.getName() + "'");
+	stringUtil descriptionNeeded(roomItem.getDescription());
+	nameNeeded.WriteToConsole();
+	descriptionNeeded.WriteToConsole();
+}
+
+item room::getItem()
+{
+	return roomItem;
 }

@@ -1,7 +1,11 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "ItemClass.h"
 #include "UtilClass.h"
+#include "RoomClass.h"
+#include "PlayerClass.h"
+#include "ActionClass.h"
 #ifndef GAME_H
 #define GAME_H
 
@@ -12,8 +16,10 @@ class Game
 {
 protected:
 	room rooms[5];
-	string message;
-	int currentRoom = 0;
+	string message; // Will be used for taking input.
+	int currentRoom = 1;
+	bool itemUsed[5];
+	player newPlayer;
 
 public:
 	void gameStart();
@@ -24,6 +30,10 @@ public:
 	void moveSouth();
 	void moveEast();
 	void moveWest();
+
+	void actions();
+
+	void use();
 };
 
 #endif

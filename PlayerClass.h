@@ -17,7 +17,6 @@ public:
 	player(int playerHealth);
 
 	int getHealth();
-	//bool findAction(string actionName);
 };
 
 #endif

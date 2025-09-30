@@ -13,60 +13,69 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\OldTaskFunctions">
+      <UniqueIdentifier>{769c80ff-fd51-410e-87b6-748551330f34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClasses">
+      <UniqueIdentifier>{03b5f4cc-61c4-4e72-a9fa-fea64cd94f27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OldStringUtilClass">
+      <UniqueIdentifier>{eb4df49e-bcba-4274-8eba-32270b37a347}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UtilClass.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Task3Functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Task2Functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ItemClass.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RoomClass.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerClass.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ActionClass.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Task2Functions.cpp">
+      <Filter>Source Files\OldTaskFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="Task3Functions.cpp">
+      <Filter>Source Files\OldTaskFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionClass.cpp">
+      <Filter>Source Files\GameClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemClass.cpp">
+      <Filter>Source Files\GameClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerClass.cpp">
+      <Filter>Source Files\GameClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="RoomClass.cpp">
+      <Filter>Source Files\GameClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilClass.cpp">
+      <Filter>Source Files\OldStringUtilClass</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="UtilClass.h">
+    <ClInclude Include="Game.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Task3Functions.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\OldTaskFunctions</Filter>
     </ClInclude>
     <ClInclude Include="Task2Functions.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ItemClass.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RoomClass.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerClass.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\OldTaskFunctions</Filter>
     </ClInclude>
     <ClInclude Include="ActionClass.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\GameClasses</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="ItemClass.h">
+      <Filter>Source Files\GameClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerClass.h">
+      <Filter>Source Files\GameClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomClass.h">
+      <Filter>Source Files\GameClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilClass.h">
+      <Filter>Source Files\OldStringUtilClass</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
