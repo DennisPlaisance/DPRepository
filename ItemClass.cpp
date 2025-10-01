@@ -42,6 +42,11 @@ string item::getName()
 	return itemName;
 }
 
+string item::getUseText() // This one is specifically for debugging the center rooms item.
+{
+	return usageText;
+}
+
 food::food()
 {
 	itemName = "Placeholder";

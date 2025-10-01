@@ -24,7 +24,8 @@ void Game::gameStart() // Main game loop. While the player is still alive, certa
 	
 	cout << "Task 4 Assessment" << endl;
 	cout << "==================================================" << endl;
-	cout << "The Bunker is unsafe. Take caution." << endl;
+	cout << "The night is still young, and the trenches speak naught but the rain. Overhead fire ceased an hour ago, and with it, all signs of life. You'll have to take shelter somewhere in these catacombs, whether you like it or not. Winning the war's their job; yours is to survive." << endl;
+	cout << "You make your way through desolate spaces to reach a bunker seemingly untouched by the storm. The room you find yourself in contains four ways. A gramophone lies on a crate near a support beam." << endl;
 	cout << "What will you do first? Type 'help' for a list of commands." << endl;
 	cout << "==================================================" << endl;
 
@@ -85,9 +86,14 @@ void Game::gameHelp() // Lists commands the player can type. These cannot be use
 
 void Game::roomCheck() // Checks what the current room is and prints its respective descriptions.
 {
+	item gramophone("Gramophone", "An old device used to play music.", "You interacted with the device.");
+	food hardbiscuit("Hard Biscuit", "A biscuit that could break your teeth.", "You ate the biscuit. Thankfully, your teeth aren't broken.");
+	item lantern("Lantern", "A rusty old lantern.", "You interacted with the lantern.");
+	food cornedbeef("Corned Beef", "A soldiers ration.", "You ate the ration. Not very filling.");
+	item whistle("Officer's Whistle", "Screams a sound you'd rather forget.", "You refuse to create such an obnoxious noise.");
+
 	if (currentRoom == 1)
 	{
-		item gramophone("Gramophone", "An old device used to play music.", "You interacted with the device.");
 		rooms[0] = room("Center Room", "The center starting room.", gramophone);
 
 		rooms[0].describeRoom();
@@ -95,7 +101,6 @@ void Game::roomCheck() // Checks what the current room is and prints its respect
 	}
 	else if (currentRoom == 2)
 	{
-		food hardbiscuit("Hard Biscuit", "A biscuit that could break your teeth.", "You ate the biscuit. Thankfully, your teeth aren't broken.");
 		rooms[1] = room("Sleeping Quarters", "The soldiers rest here.", hardbiscuit);
 
 		rooms[1].describeRoom();
@@ -107,14 +112,11 @@ void Game::roomCheck() // Checks what the current room is and prints its respect
 		{
 			cout << "" << endl;
 			cout << "An enemy appears." << endl;
-			cout << "Remember your options of attack: " << endl;
-			actions();
 			enemyAttack();
 		}
 	}
 	else if (currentRoom == 3)
 	{
-		item lantern("Lantern", "A rusty old lantern.", "You interacted with the lantern.");
 		rooms[2] = room("Observation Post", "Rain pours through the pillbox opening.", lantern);
 
 		rooms[2].describeRoom();
@@ -122,7 +124,6 @@ void Game::roomCheck() // Checks what the current room is and prints its respect
 	}
 	else if (currentRoom == 4)
 	{
-		food cornedbeef("Corned Beef", "A soldiers ration.", "You ate the ration. Not very filling.");
 		rooms[3] = room("Sunken Mess", "The mess hall has collapsed.", cornedbeef);
 
 		rooms[3].describeRoom();
@@ -133,7 +134,6 @@ void Game::roomCheck() // Checks what the current room is and prints its respect
 	}
 	else if (currentRoom == 5)
 	{
-		item whistle("Officer's Whistle", "Screams a sound you'd rather forget.", "You refuse to create such an obnoxious noise.");
 		rooms[4] = room("Officer's Quarter", "A small room for planning.", whistle);
 
 		rooms[4].describeRoom();
@@ -239,9 +239,9 @@ void Game::moveWest()
 void Game::actions() // Lists the actions a player can take in an attack.
 {
 	cout << "" << endl;
-	cout << "revolver - Revolver Gun" << endl;
-	cout << "shovel - Shovel Melee" << endl;
-	cout << "knife - Knife Melee" << endl;
+	cout << "revolver - Ranged Damage" << endl;
+	cout << "shovel - Melee Damage" << endl;
+	cout << "knife - Melee Damage" << endl;
 }
 
 void Game::showHealth()
@@ -380,16 +380,25 @@ void Game::use() // There are two item types, items and foods. Items are usually
 void Game::enemyAttack() // Plays out an attack. Players get the first turn, and from then on the enemy will attack second. When you die, you lose the game.
 {
 	action knife("Knife", 15);
-	action shovel("Shovel", 35);
-	action revolver("Revolver", 25);
+	action shovel("Shovel", 30);
+	action revolver("Revolver", 35);
 	
-	enemy screamer("Screamer", 80, 5);
+	string sirenName = "Siren";
+	string sirenDescription = "A figure wearing the tattered remains of a British Infantry's uniform. Its skin is decayed and rotten. Its mouth covers the majority of its face, always wide open, bearing jagged teeth. It shakes erratically, arms crossed to either shoulder, fingers long, bony and outstretched. Scratches cover its entire body, likely self inflicted. It screams uncontrollably.";
+
+	enemy siren(sirenName, sirenDescription, 80, 5);
 
 	enemyAttacking = true;
 
 	cout << "" << endl;
+	cout << siren.getDescription() << endl;
+	cout << "The Enemy is named, '" << siren.getName() << ".'" << endl;
+	cout << "" << endl;
+	cout << "Remember your options of attack: " << endl;
+	actions();
+	cout << "" << endl;
 	cout << "You currently have " << newPlayer.getHealth() << " health." << endl;
-	cout << "The enemy currently has " << screamer.getHealth() << " health." << endl;
+	cout << "The enemy currently has " << siren.getHealth() << " health." << endl;
 
 	while (enemyAttacking && not gameOver)
 	{
@@ -398,17 +407,17 @@ void Game::enemyAttack() // Plays out an attack. Players get the first turn, and
 
 		if (attackString.ToLower() == "revolver")
 		{
-			screamer.takeDamage(revolver.cast());
+			siren.takeDamage(revolver.cast());
 			cout << "You fire off your revolver." << endl;
 		}
 		else if (attackString.ToLower() == "knife")
 		{
-			screamer.takeDamage(knife.cast());
+			siren.takeDamage(knife.cast());
 			cout << "You swing your knife." << endl;
 		}
 		else if (attackString.ToLower() == "shovel")
 		{
-			screamer.takeDamage(shovel.cast());
+			siren.takeDamage(shovel.cast());
 			cout << "You swing your shovel." << endl;
 		}
 		else
@@ -416,17 +425,17 @@ void Game::enemyAttack() // Plays out an attack. Players get the first turn, and
 			cout << "This cannot be done in an attack." << endl;
 		}
 
-		if (screamer.getHealth() > 0)
+		if (siren.getHealth() > 0)
 		{
 			cout << "" << endl;
-			cout << "The enemy's health has been dropped to " << screamer.getHealth() << "." << endl;
+			cout << "The enemy's health has been dropped to " << siren.getHealth() << "." << endl;
 
-			newPlayer.takeDamage(screamer.getDamage());
+			newPlayer.takeDamage(siren.getDamage());
 			cout << "The enemy attacks, dropping your health to " << newPlayer.getHealth() << "." << endl;
 		}
 		else
 		{
-			cout << "The enemy has been defeated. It will no longer bother you." << endl;
+			cout << "The " << siren.getName() << " " << "has been defeated. It will no longer bother you." << endl;
 			cout << "" << endl;
 			enemyAttacking = false;
 			enemyDead = true;

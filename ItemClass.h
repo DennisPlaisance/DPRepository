@@ -22,6 +22,7 @@ public:
 	virtual void useItem();
 	virtual string getDescription();
 	virtual string getName();
+	virtual string getUseText();
 };
 
 class food : public item

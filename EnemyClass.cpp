@@ -17,11 +17,22 @@ enemy::enemy()
 	dmg = 5;
 }
 
-enemy::enemy(string enemyName, int enemyHealth, int dmgDealing)
+enemy::enemy(string enemyName, string enemyDescription, int enemyHealth, int dmgDealing)
 {
 	name = enemyName;
+	description = enemyDescription;
 	health = enemyHealth;
 	dmg = dmgDealing;
+}
+
+string enemy::getName()
+{
+	return name;
+}
+
+string enemy::getDescription()
+{
+	return description;
 }
 
 int enemy::getHealth()
