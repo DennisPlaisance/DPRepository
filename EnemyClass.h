@@ -4,6 +4,8 @@
 #ifndef ENEMYCLASS_H
 #define ENEMYCLASS_H
 
+// hi
+
 using namespace std;
 #pragma once
 
